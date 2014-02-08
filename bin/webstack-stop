@@ -1,0 +1,12 @@
+#!/bin/bash
+
+if [ -z $HELPERS_LOADED ]; then source $(dirname $0)/__helpers__; fi
+
+text red "Stopping Apache...\n"
+sudo service apache2 stop
+
+text red "Stopping MySQL...\n"
+sudo service mysql stop
+
+text red "Stopping Memcached...\n"
+sudo service memcached stop
