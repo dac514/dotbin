@@ -35,3 +35,4 @@ alias dir="ls -alh"
 alias nano="nano -wu"
 alias clearall="printf \"\033c\""
 alias grepri="grep -ri --exclude-dir=\".svn\" --exclude-dir=\".idea\" --exclude-dir=\".git\""
+alias gitlog='git log --graph --full-history --all --color --pretty=format:"%x1b[31m%h%x09%x1b[32m%d%x1b[0m%x20%s"'
