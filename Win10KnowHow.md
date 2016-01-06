@@ -34,4 +34,7 @@ While using the embedded version of git, this error happened:
     C:\Users\dac514\AppData\Local\Atlassian\SourceTree\git_local\bin\bash.exe: *** Couldn't reserve space for cygwin's heap, Win32 error 0
 
 Reason: 
+
+_"Cygwin uses persistent shared memory sections, which can on occasion become corrupted. The symptom of this is that some Cygwin programs begin to fail, but other applications are unaffected."_
+
 + http://stackoverflow.com/questions/18502999/git-extensions-win32-error-487-couldnt-reserve-space-for-cygwins-heap-win32
