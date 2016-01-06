@@ -17,7 +17,7 @@
 
 I keep getting CPU spikes on my laptop. The reason is because of broken webcam drivers. Keyword `risdxc64`
 
-The fix is to 1) manually install the drivers provided by Lenovo IE. Download [g1c814ww.exe](http://support.lenovo.com/ca/en/downloads/ds032431), unpack, open Device Manager, and forcibly point "Integrated Camera -> Properties -> Update Driver..." to aforementioned unpacked DRIVERS dir 2) Turn off automatic driver upgrades in Windows 10 so that new drivers don't get downgraded to MS "signed" versions. (can be done using [ShutUp10](http://www.oo-software.com/en/shutup10)
+The fix is to 1) manually install the drivers provided by Lenovo IE. Download [g1c814ww.exe](http://support.lenovo.com/ca/en/downloads/ds032431), unpack, open Device Manager, and forcibly point "Integrated Camera -> Properties -> Update Driver..." to aforementioned unpacked DRIVERS dir 2) Turn off automatic driver upgrades in Windows 10 so that new drivers don't get downgraded to MS "signed" versions. (can be done using [ShutUp10](http://www.oo-software.com/en/shutup10))
 
 
 ### Sourcetree
