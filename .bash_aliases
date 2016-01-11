@@ -25,6 +25,7 @@ PS1="$LIGHT_BLUE[$WHITE\u$NO_COLOUR@$LIGHT_GREEN\h$LIGHT_BLUE][$WHITE\w$LIGHT_BL
 # EDITOR
 export EDITOR="nano -wu"
 export SVN_EDITOR="nano -wu"
+export GIT_EDITOR="nano -wu"
 
 # PATHS
 export PATH=$PATH:~/bin
