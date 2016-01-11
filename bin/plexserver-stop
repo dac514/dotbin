@@ -1,6 +1,0 @@
-#!/bin/bash
-
-if [ -z $HELPERS_LOADED ]; then source $(dirname $0)/__helpers__; fi
-
-text red "Stopping Plex...\n"
-sudo service plexmediaserver stop
