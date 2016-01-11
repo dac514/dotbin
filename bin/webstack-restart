@@ -2,6 +2,9 @@
 
 if [ -z $HELPERS_LOADED ]; then source $(dirname $0)/__helpers__; fi
 
+text red "Restarting PHP-FPM...\n"
+sudo service php5-fpm restart;
+
 text yellow "Restarting Apache...\n"
 sudo service apache2 restart
 
