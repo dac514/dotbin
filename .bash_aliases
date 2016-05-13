@@ -19,6 +19,10 @@ WHITE="\[\033[1;37m\]"
 NO_COLOUR="\[\033[0m\]"
 BLUE_BG="\[\033[0;44m\]"
 
+# Git aware prompt - See: https://github.com/jimeh/git-aware-prompt
+export GITAWAREPROMPT=~/code/github/jimeh/git-aware-prompt
+source "${GITAWAREPROMPT}/main.sh"
+
 # PROMPT
 PS1="$LIGHT_BLUE[$WHITE\u$NO_COLOUR@$LIGHT_GREEN\h$LIGHT_BLUE][$WHITE\w$LIGHT_BLUE]\n$LIGHT_BLUE[$WHITE\t$LIGHT_BLUE]$NO_COLOUR"
 PS1="${PS1}\[$txtcyn\]\$git_branch\[$txtred\]\$git_dirty\[$txtrst\] " # Git aware prompt 
@@ -51,6 +55,3 @@ export HISTSIZE=${HISTFILESIZE}  # increase history size (default is 500)
 export PROMPT_COMMAND="history -a; history -n; ${PROMPT_COMMAND}"   # mem/file sync
 if [[ $- =~ .*i.* ]]; then bind '"\C-r": "\C-a hh \C-j"'; fi
 
-# Git aware prompt - See: https://github.com/jimeh/git-aware-prompt
-export GITAWAREPROMPT=~/code/github/jimeh/git-aware-prompt
-source "${GITAWAREPROMPT}/main.sh"
