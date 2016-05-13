@@ -1,32 +1,12 @@
-# COLOURS
-TEMP="\[\033[1;30m\]"
-BLACK="\[\033[0;30m\]"
-RED="\[\033[0;31m\]"
-GREEN="\[\033[0;32m\]"
-ORANGE="\[\033[0;33m\]"
-BLUE="\[\033[0;34m\]"
-PURPLE="\[\033[0;35m\]"
-CYAN="\[\033[0;36m\]"
-LIGHT_GRAY="\[\033[0;37m\]"
-LIGHT_BLACK="\[\033[1;30m\]"
-LIGHT_RED="\[\033[1;31m\]"
-LIGHT_GREEN="\[\033[1;32m\]"
-YELLOW="\[\033[1;33m\]"
-LIGHT_BLUE="\[\033[1;34m\]"
-LIGHT_PINK="\[\033[1;35m\]"
-LIGHT_CYAN="\[\033[1;36m\]"
-WHITE="\[\033[1;37m\]"
-NO_COLOUR="\[\033[0m\]"
-BLUE_BG="\[\033[0;44m\]"
-
 # Git aware prompt - See: https://github.com/jimeh/git-aware-prompt
+# With colors: https://github.com/jimeh/git-aware-prompt/blob/master/colors.sh
 export GITAWAREPROMPT=~/code/github/jimeh/git-aware-prompt
 source "${GITAWAREPROMPT}/main.sh"
 
 # PROMPT
-PS1="$LIGHT_BLUE[$WHITE\u$NO_COLOUR@$LIGHT_GREEN\h$LIGHT_BLUE][$WHITE\w$LIGHT_BLUE]\n$LIGHT_BLUE[$WHITE\t$LIGHT_BLUE]$NO_COLOUR"
-PS1="${PS1}\[$txtcyn\]\$git_branch\[$txtred\]\$git_dirty\[$txtrst\] " # Git aware prompt 
-PS1="${PS1}\`if [ \$? = 0 ]; then echo \[\e[33m\]^_^$NO_COLOUR; else echo \[\e[31m\]O_O$NO_COLOUR; fi\` " # Show Happy face upon successful execution
+PS1="\[$bldblu\][\[$txtwht\]\u\[$txtrst\]@\[$bldgrn\]\h\[$bldblu\]][\[$txtwht\]\w\[$txtblu\]]\n\[$bldblu\][\[$txtwht\]\t\[$txtblu\]]\[$txtrst\]"
+PS1="${PS1}\[$txtcyn\]\$git_branch\[$txtred\]\$git_dirty\[$txtrst\] " # Git aware prompt
+PS1="${PS1}\`if [ \$? = 0 ]; then echo \"\[$txtylw\]^_^\[$txtrst\]\"; else echo \"\[$txtred\]O_O\[$txtrst\]\"; fi\` " # Show Happy face upon successful execution
 
 # EDITOR
 export EDITOR="nano -wu"
