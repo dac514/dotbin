@@ -6,7 +6,7 @@ source "${GITAWAREPROMPT}/main.sh"
 # PROMPT
 PS1="\[$bldblu\][\[$txtwht\]\u\[$txtrst\]@\[$bldgrn\]\h\[$bldblu\]][\[$txtwht\]\w\[$txtblu\]]\n\[$bldblu\][\[$txtwht\]\t\[$txtblu\]]\[$txtrst\]"
 PS1="${PS1}\[$txtcyn\]\$git_branch\[$txtred\]\$git_dirty\[$txtrst\] " # Git aware prompt
-PS1="${PS1}\`if [ \$? = 0 ]; then echo \"\[$txtylw\]^_^\[$txtrst\]\"; else echo \"\[$txtred\]O_O\[$txtrst\]\"; fi\` " # Show Happy face upon successful execution
+PS1="${PS1}\`if [ \$? = 0 ]; then echo \"\[$txtylw\]^_^\[$txtrst\]\"; else echo \"\[$txtred\]O_O\[$txtrst\]\"; fi\` " # Show happy face upon successful execution, angry face on fail
 
 # EDITOR
 export EDITOR="nano -wu"
