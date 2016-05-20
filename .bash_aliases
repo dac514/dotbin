@@ -17,7 +17,6 @@ export GIT_EDITOR="nano -wu"
 export PATH="$HOME/bin:$HOME/dotbin:$HOME/local/bin:$PATH"
 export JAVA_CMD=/usr/bin/java
 
-
 # ALIASES
 alias dir="ls -alh"
 alias nano="nano -wu"
