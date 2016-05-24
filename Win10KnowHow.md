@@ -15,7 +15,9 @@
 	
 ### CPU Spikes on Lenovo X220
 
-I keep getting a permanent 25% CPU spike on my laptop. The reason is because of broken Ricoh Media Card (SD card) drivers. I can reproduce the spike by changing Power Options mode from "Power saver" to "High performance." The problem can be observed using [Process Explorer](https://technet.microsoft.com/en-us/sysinternals/processexplorer.aspx?f=255&MSPPError=-2147217396). Problem goes away after reboot (sometimes more than one.) Unresolved. Keyword `risdxc64`
+I keep getting a permanent 25% CPU spike on my laptop. The reason is because of broken Ricoh Media Card (SD card) drivers. I can reproduce the spike by changing Power Options mode from "Power saver" to "High performance." The problem can be observed using [Process Explorer](https://technet.microsoft.com/en-us/sysinternals/processexplorer.aspx?f=255&MSPPError=-2147217396). 
+
+Fix: Device Manager -> Storage Controllers -> RICOH PCIe SDXC/MMC Controller Driver (or similar name) :: Disable
 
 
 ### How to Force Install Drivers

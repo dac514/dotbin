@@ -14,9 +14,8 @@ export SVN_EDITOR="nano -wuc"
 export GIT_EDITOR="nano -wuc"
 
 # PATHS
-export PATH=$PATH:~/bin
-export JAVA_CMD=/usr/bin/java
 export PATH="$HOME/bin:$HOME/dotbin:$HOME/local/bin:$PATH"
+export JAVA_CMD=/usr/bin/java
 
 # ALIASES
 alias dir="ls -alh"
