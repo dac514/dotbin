@@ -9,9 +9,9 @@ PS1="${PS1}\[$txtcyn\]\$git_branch\[$txtred\]\$git_dirty\[$txtrst\] " # Git awar
 PS1="${PS1}\`if [ \$? = 0 ]; then echo \"\[$txtylw\]^_^\[$txtrst\]\"; else echo \"\[$txtred\]O_O\[$txtrst\]\"; fi\` " # Show happy face upon successful execution, angry face on fail
 
 # EDITOR
-export EDITOR="nano -wu"
-export SVN_EDITOR="nano -wu"
-export GIT_EDITOR="nano -wu"
+export EDITOR="nano -wuc"
+export SVN_EDITOR="nano -wuc"
+export GIT_EDITOR="nano -wuc"
 
 # PATHS
 export PATH=$PATH:~/bin
@@ -20,7 +20,7 @@ export PATH="$HOME/bin:$HOME/dotbin:$HOME/local/bin:$PATH"
 
 # ALIASES
 alias dir="ls -alh"
-alias nano="nano -wu"
+alias nano="nano -wuc"
 alias clearall="printf \"\033c\""
 alias grepri="grep -ri --exclude-dir=\".svn\" --exclude-dir=\".idea\" --exclude-dir=\".git\""
 alias gitlog='git log --graph --full-history --all --color --pretty=format:"%x1b[31m%h%x09%x1b[32m%d%x1b[0m%x20%s"'
