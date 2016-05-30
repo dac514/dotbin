@@ -14,7 +14,7 @@ export SVN_EDITOR="nano -wuc"
 export GIT_EDITOR="nano -wuc"
 
 # PATHS
-export PATH="$HOME/bin:$HOME/dotbin:$HOME/local/bin:$PATH"
+export PATH="$HOME/bin:$HOME/dotbin:$PATH"
 export JAVA_CMD=/usr/bin/java
 
 # ALIASES
@@ -34,3 +34,7 @@ export HISTSIZE=${HISTFILESIZE}  # increase history size (default is 500)
 export PROMPT_COMMAND="history -a; history -n; ${PROMPT_COMMAND}"   # mem/file sync
 if [[ $- =~ .*i.* ]]; then bind '"\C-r": "\C-a hh \C-j"'; fi
 
+# NVM - See: https://github.com/creationix/nvm
+export NVM_DIR="$HOME/.nvm"
+[ -s "$NVM_DIR/nvm.sh" ] && . "$NVM_DIR/nvm.sh"
+[[ -r $NVM_DIR/bash_completion ]] && . $NVM_DIR/bash_completion
