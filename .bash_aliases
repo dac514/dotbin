@@ -24,14 +24,15 @@ alias clearall="printf \"\033c\""
 alias grepri="grep -ri --exclude-dir=\".svn\" --exclude-dir=\".idea\" --exclude-dir=\".git\""
 alias gitlog='git log --graph --full-history --all --color --pretty=format:"%x1b[31m%h%x09%x1b[32m%d%x1b[0m%x20%s"'
 alias php-server='php -S localhost:8888 -t ~/public_html/'
+alias npm-exec='PATH=$(npm bin):$PATH'
 
 # HH - See: https://github.com/dvorka/hstr
-export HH_CONFIG=hicolor         # get more colors
-shopt -s histappend              # append new history items to .bash_history
-export HISTCONTROL=ignorespace   # leading space hides commands from history
-export HISTFILESIZE=10000        # increase history file size (default is 500)
-export HISTSIZE=${HISTFILESIZE}  # increase history size (default is 500)
-export PROMPT_COMMAND="history -a; history -n; ${PROMPT_COMMAND}"   # mem/file sync
+export HH_CONFIG=hicolor  ### get more colors
+shopt -s histappend ### append new history items to .bash_history
+export HISTCONTROL=ignorespace:ignoreboth:erasedups ### leading space hides commands from history, avoid duplicate entries in .bash_history
+export HISTFILESIZE=10000 ### increase history file size (default is 500)
+export HISTSIZE=${HISTFILESIZE} ### increase history size (default is 500)
+export PROMPT_COMMAND="history -a; history -n; ${PROMPT_COMMAND}" ### mem/file sync
 if [[ $- =~ .*i.* ]]; then bind '"\C-r": "\C-a hh \C-j"'; fi
 
 # NVM - See: https://github.com/creationix/nvm
