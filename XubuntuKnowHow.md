@@ -171,3 +171,8 @@ GUIs:
 Remove services:
 
 	$ sudo update-rc.d -f memcached remove
+
+### Slow wifi on Lenovo X1 Carbon fix
+
+        $ sudo nano /etc/modprobe.d/iwlwifi.conf
+        > options iwlwifi 11n_disable=1
