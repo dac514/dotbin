@@ -24,6 +24,13 @@ Fix: Device Manager -> Storage Controllers -> RICOH PCIe SDXC/MMC Controller Dri
 
 Example: Manually install the camera drivers provided by Lenovo IE. Download [g1c814ww.exe](http://support.lenovo.com/ca/en/downloads/ds032431), unpack, open Device Manager, and forcibly point "Integrated Camera -> Properties -> Update Driver..." to aforementioned unpacked DRIVERS dir 2) Turn off automatic driver upgrades in Windows 10 so that new drivers don't get downgraded to MS "signed" versions. (can be done using [ShutUp10](http://www.oo-software.com/en/shutup10))
 
+### Git Bash for Windows
+
+$ cat .bash_profile
+
+    # ASK FOR GIT PASSPHRASE (CACHE IT)
+    eval `ssh-agent`
+    ssh-add
 
 ### Sourcetree
 
