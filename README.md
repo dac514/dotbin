@@ -1,9 +1,9 @@
 My ~/homedir brew
 =================
 
-	$ cd
-	$ ln -s code/dotbin/.bash_aliases .bash_aliases
-	$ ln -s code/dotbin/bin dotbin
+    $ cd
+    $ ln -s ~/code/connerbw/dotbin/.bash_aliases .bash_aliases
+    $ ln -s ~/code/connerbw/dotbin/bin dotbin
 
 My Current Laptop: Lenovo X220
 =================
