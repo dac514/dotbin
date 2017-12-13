@@ -31,6 +31,8 @@ $ cat .bash_profile
     # ASK FOR GIT PASSPHRASE (CACHE IT)
     eval `ssh-agent`
     ssh-add
+    
+Better solution: https://help.github.com/articles/working-with-ssh-key-passphrases/#auto-launching-ssh-agent-on-git-for-windows    
 
 ### Sourcetree
 
