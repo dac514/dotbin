@@ -1,3 +1,4 @@
 #!/bin/bash
-for i in */.git; do ( echo $i; cd $i/..; git pull; ); done
-
+LPURPLE=$(echo -en '\033[01;35m')
+RESTORE=$(echo -en '\033[0m')
+for i in */.git; do ( echo ${LPURPLE}$i${RESTORE}; cd $i/..; echo -n "${LPURPLE}> "; git rev-parse --abbrev-ref HEAD; echo -n ${RESTORE}; git pull; ); done
