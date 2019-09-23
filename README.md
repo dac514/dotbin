@@ -2,8 +2,8 @@ My ~/homedir brew
 =================
 
     $ cd
-    $ ln -s ~/code/connerbw/dotbin/.bash_aliases .bash_aliases
-    $ ln -s ~/code/connerbw/dotbin/bin dotbin
+    $ ln -s ~/code/github/connerbw/dotbin/.bash_aliases .bash_aliases
+    $ ln -s ~/code/github/connerbw/dotbin/bin dotbin
 
 My Current Laptop: Dell Inspiron 7570
 =================
