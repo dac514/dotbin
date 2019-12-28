@@ -25,7 +25,9 @@ alias grepri="grep -ri --exclude-dir=\".svn\" --exclude-dir=\".idea\" --exclude-
 alias gitlog='git log --graph --full-history --all --color --pretty=format:"%x1b[31m%h%x09%x1b[32m%d%x1b[0m%x20%s"'
 alias php-server='php -S localhost:8888 -t ~/public_html/'
 alias npm-exec='PATH=$(npm bin):$PATH'
-alias find-submodules="grep path .gitmodules | sed 's/.*= //'"
+alias find-submodules="[ -d ".gitmodules" ] && grep path .gitmodules | sed 's/.*= //'"
+alias find-vendor="find . -type f -path '*vendor/autoload.php' -printf '%h\n'"
+alias find-node_modules="find . -name 'node_modules' -type d -prune"
 
 # HH - See: https://github.com/dvorka/hstr
 export HH_CONFIG=hicolor  ### get more colors
