@@ -59,7 +59,7 @@ Use `choco`: https://chocolatey.org/
 
 Stop unwanted version upgrades with the pin command:
 
-    choco pin add -n=nodejs --version=10.18.0
+    choco pin add -n=nodejs --version 10.18.0
     
 Downgrade by performing an uninstall and then an install:
 
