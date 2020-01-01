@@ -52,3 +52,16 @@ Reason:
 _"Cygwin uses persistent shared memory sections, which can on occasion become corrupted. The symptom of this is that some Cygwin programs begin to fail, but other applications are unaffected."_
 
 + http://stackoverflow.com/questions/18502999/git-extensions-win32-error-487-couldnt-reserve-space-for-cygwins-heap-win32
+
+### Package Manager
+
+Use `choco`: https://chocolatey.org/
+
+Stop unwanted version upgrades with the pin command:
+
+    choco pin add -n=nodejs --version=10.18.0
+    
+Downgrade by performing an uninstall and then an install:
+
+    choco uninstall virtualbox
+    choco install virtualbox --version 6.0.14
