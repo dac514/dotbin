@@ -1,0 +1,31 @@
+#!/bin/bash
+set -e
+destination='master'
+branch=$(git rev-parse --abbrev-ref HEAD)
+git checkout ${destination}
+git pull
+git checkout ${branch}
+git checkout -b ${branch}-backup
+git checkout ${destination}
+git branch -D ${branch}
+git checkout -b ${branch}
+git merge --squash ${branch}-backup
+_done="
+Everything seems fine. Next steps:
+    git status
+    git commit # Or re-stage and do multiple commits
+    git push --force-with-lease --set-upstream origin ${branch}
+ 
+To undo:
+    git reset HEAD .
+    git checkout -- .
+    git checkout ${destination}
+    git branch -d ${branch}
+    # If branch exists on GiHub:
+    git branch -D ${branch}-backup
+    git fetch
+    git checkout ${branch}
+    # Else:
+    git branch -m ${branch}-backup ${branch}
+"
+echo "$_done"
