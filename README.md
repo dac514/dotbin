@@ -26,8 +26,3 @@
 
 + [Image with labels of the ports](inspiron-7000-ports.png)
 
-## Lenovo X220
-
- + Left side rear: Blue USB 3.0 
- + Left side front: Black USB 2.0.
- + Right side front: Yellow always-on USB 2.0.	
