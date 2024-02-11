@@ -1,4 +1,4 @@
-# My ~/homedir brew
+# My ~/homedir concoction
 
     $ cd
     $ ln -s ~/code/github/connerbw/dotbin/.bash_aliases .bash_aliases
@@ -11,7 +11,7 @@
 
 # My Laptops
 
-## Dell Inspiron 15 5510
+## Dell Inspiron 15 5510 (DAC)
 
 + [Left](https://www.dell.com/support/manuals/en-ca/inspiron-15-5510-laptop/inspiron-5510-setup-and-specifications/left?guid=guid-12cd14bb-8db3-47d7-a090-15d75787517a&lang=en-us)
   + HDMI 1.4 port
@@ -22,7 +22,7 @@
   + SD-card slot
   + USB 3.2 Gen 1 port
 
-## Dell Inspiron 7570
+## Dell Inspiron 7570 (DACK)
 
 + [Image with labels of the ports](inspiron-7000-ports.png)
 
