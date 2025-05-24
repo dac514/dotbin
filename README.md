@@ -1,8 +1,8 @@
 # My ~/homedir concoction
 
     $ cd
-    $ ln -s ~/code/github/connerbw/dotbin/.bash_aliases .bash_aliases
-    $ ln -s ~/code/github/connerbw/dotbin/bin dotbin
+    $ ln -s ~/code/github/dac514/dotbin/.bash_aliases .bash_aliases
+    $ ln -s ~/code/github/dac514/dotbin/bin dotbin
 
 # My FAQs
 
