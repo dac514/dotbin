@@ -29,14 +29,23 @@ alias find-submodules="[ -d ".gitmodules" ] && grep path .gitmodules | sed 's/.*
 alias find-vendor="find . -type f -path '*vendor/autoload.php' -printf '%h\n'"
 alias find-node_modules="find . -name 'node_modules' -type d -prune"
 
+# WSL
+# alias cd-home="cd /mnt/c/Users/dac51"
+# alias open="explorer.exe"
+
 # HH - See: https://github.com/dvorka/hstr
-export HH_CONFIG=hicolor  ### get more colors
-shopt -s histappend ### append new history items to .bash_history
-export HISTCONTROL=ignorespace:ignoreboth:erasedups ### leading space hides commands from history, avoid duplicate entries in .bash_history
-export HISTFILESIZE=10000 ### increase history file size (default is 500)
-export HISTSIZE=${HISTFILESIZE} ### increase history size (default is 500)
-export PROMPT_COMMAND="history -a; history -n; ${PROMPT_COMMAND}" ### mem/file sync
-if [[ $- =~ .*i.* ]]; then bind '"\C-r": "\C-a hh \C-j"'; fi
+alias hh=hstr                    # hh to be alias for hstr
+export HSTR_CONFIG=hicolor       # get more colors
+shopt -s histappend              # append new history items to .bash_history
+export HISTCONTROL=ignoreboth:erasedups
+export HISTFILESIZE=10000        # increase history file size (default is 500)
+export HISTSIZE=${HISTFILESIZE}  # increase history size (default is 500)
+# ensure synchronization between bash memory and history file
+export PROMPT_COMMAND="history -a; history -n; ${PROMPT_COMMAND}"
+if [[ $- =~ .*i.* ]]; then bind '"\C-r": "\C-a hstr -- \C-j"'; fi
+# if this is interactive shell, then bind 'kill last command' to Ctrl-x k
+if [[ $- =~ .*i.* ]]; then bind '"\C-xk": "\C-a hstr -k \C-j"'; fi
+export HSTR_TIOCSTI=y
 
 # NVM - See: https://github.com/creationix/nvm
 export NVM_DIR="$HOME/.nvm"
